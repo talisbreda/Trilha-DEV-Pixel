@@ -1,9 +1,19 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    counter-reset: jobcount;
+}
 
 html {
     font-size: 62.5%;
@@ -14,6 +24,10 @@ header, section {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+section {
+    min-height: 100vh;
 }
 
 .wrapper {
@@ -30,11 +44,22 @@ header, section {
     background-size: cover;
 }
 
+h1 {
+    font-size: 6rem;
+}
+
+p {
+    font-size: 2.3rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
 
 
 /* Header*/
 header {
-    background: lightgray;
+    background: white;
     position: fixed;
     width: 100%;
 }
@@ -42,6 +67,10 @@ header {
 header > div > * {
     cursor: pointer;
     
+}
+
+header p {
+    font-weight: bold;
 }
 
 .header-options-container {
@@ -55,11 +84,9 @@ header > div > * {
 .header-options-container h3 {
     font-weight: normal;
     font-size: 1.8rem;
+    text-align: center;
 }
 
-header h2 {
-    font-size: 2.3rem;
-}
 
 
 
@@ -68,7 +95,6 @@ header h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 }
 
 .section1-text-container {
@@ -77,7 +103,7 @@ header h2 {
     justify-content: space-between;
 }
 
-.section1 p {
+.section1 .wrapper p, .section1 .wrapper h1 {
     color: white;
     padding: 4vh 0;
     width: 80%;
@@ -89,9 +115,96 @@ header h2 {
 
 .section1 .section1-title {
     font-size: 6rem;
-    font-weight: bold;
 }
 
 .section1 .section1-text {
     font-size: 2.3rem;
+}
+
+
+
+/* Section 2 */
+.section2 .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2 .wrapper p {
+    width: 60%;
+    font-size: 2.3rem;
+    margin-bottom: 4vh;
+    text-align: center;
+}
+
+.section2-title {
+    text-align: center;
+    margin-bottom: 4vh;
+}
+
+
+/* Section 3 */
+.section3 * {
+    color: white;
+}
+
+.section3 .wrapper {
+    flex-direction: column;
+}
+
+.section3 h1 {
+    margin-bottom: 2vh;
+}
+
+.section3-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10vh;
+}
+
+.section3-container .job {
+    width: 30%;
+}
+
+.section3 .job-title {
+    display: flex;
+    align-items: center;
+}
+
+.section3 .job-title h2 {
+    width: 80%;
+    margin-left: 2vw;
+}
+
+.section3 .job-title h1::before {
+    font-size: 8rem;
+    counter-increment: jobcount;
+    content: counter(jobcount);
+    transform: rotate(5deg);
+    font-style: italic;
+}
+
+
+
+/* Section 4 */
+.section4 .wrapper {
+    flex-direction: column;
+}
+
+.section4 h1{
+    margin-top: 7vh;
+    margin-bottom: 2vh;
+}
+
+.section4-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1500px;
+    margin-top: 10vh;
+}
+
+.section4-grid * {
+    width: 30vw;
+    max-width: 100%;
 }

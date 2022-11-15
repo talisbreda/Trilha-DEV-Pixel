@@ -11,9 +11,27 @@ a {
     text-decoration: none;
 }
 
+a.back-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 2vh;
+    right: 2vh;
+    background-color: rgba(200, 200, 200, 0.2);
+    border-radius: 50%;
+}
+
+a > img {
+    width: 60%;
+    height: 60%;
+}
+
 body {
-    counter-reset: jobcount;
-    counter-reset: recentjobs;
+    counter-reset: recentjobs 0;
+    counter-reset: jobcount 0;
 }
 
 html {
@@ -29,10 +47,6 @@ header, section {
 
 section {
     min-height: 100vh;
-}
-
-td, th {
-    border: 1px solid black
 }
 
 .wrapper {
@@ -189,14 +203,6 @@ header p {
     font-style: italic;
 }
 
-.section5 .job-title h1::before {
-    font-size: 8rem;
-    counter-increment: recentjobs;
-    content: counter(recentjobs);
-    transform: rotate(5deg);
-    font-style: italic;
-}
-
 
 
 /* Section 4 */
@@ -232,13 +238,147 @@ header p {
     transform: scale(1.1);
 }
 
+/* Section 5 */
+
+.section5 .job-title h1::before {
+    font-size: 8rem;
+    counter-increment: recentjobs;
+    content: counter(recentjobs);
+    transform: rotate(5deg);
+    font-style: italic;
+}
+
 /* Section 6 */
 .section6 .wrapper {
     flex-direction: column;
     align-items: center;
 }
 
-.section6 .wrapper * {
+.section6 .wrapper > * {
     width: 60%;
     text-align: center;
+}
+
+.section6 p {
+    margin: 6vh 0 3vh 0;
+}
+
+table, td, th {
+    border: 1px solid #eee;
+    border-collapse: collapse;
+}
+
+.section6 caption {
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+    padding: 10px 0;
+}
+
+.section6 table tr * {
+    width: 30%;
+}
+
+.section6 table tr :nth-child(1) {
+    width: 40%;
+}
+
+.section6 td, .section6 th {
+    font-size: 2.3rem;
+    padding: 5px 10px;
+    text-align: left;
+}
+.section6 th {
+    background-color: #eee;
+}
+
+
+/* Section 7*/
+
+.section7 .wrapper {
+    flex-direction: column;
+}
+
+.section7-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section7-text {
+    width: 40%;
+}
+
+.section7-img {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.section7-img svg {
+    height: auto;
+}
+
+.section7 * {
+    color: white;
+}
+
+.section7 h1, .section7-text > p, .section7 form > p {
+    padding-top: 5vh;
+}
+
+.section7 .names {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section7 .names .name {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+
+.section7 form > input, .section7 form > textarea {
+    width: 100%;
+}
+
+.section7 form > p {
+    font-style: italic;
+}
+
+.section7 form label p {
+    margin-top: 3vh;
+    margin-bottom: 1vh;
+}
+
+.section7 input {
+    height: 7vh;
+    padding: 20px;
+    font-size: 3rem;
+    font-style: bold;
+    color: black
+}
+.section7 textarea {
+    color: black;
+    padding: 20px;
+    font-size: 3rem;
+}
+
+.section7 form button {
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 5px solid white;
+    font-size: 3rem;
+    margin-top: 3vh;
+}
+
+.section7 form button:hover {
+    background-color: white;
+    color: black;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.section7 ::placeholder {
+    color: #bbb;
+    font-style: bold;
 }

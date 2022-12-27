@@ -1,13 +1,13 @@
 // import { Component } from "react";
-import { useEffect, useState } from "react";
-import "./App.css";
+import { useEffect, useState } from 'react';
+import './App.css';
 
 function App() {
   const [counter1, setCounter1] = useState(0);
   const [counter2, setCounter2] = useState(0);
 
   const eventFn = () => {
-    console.log("h1 clicado");
+    console.log('h1 clicado');
   };
 
   // component did update - executa sempre que atualiza
@@ -19,18 +19,18 @@ function App() {
   // array passado como parametro
   // sem dependencia
   useEffect(() => {
-    document.querySelector("h1")?.addEventListener("click", eventFn);
+    document.querySelector('h1')?.addEventListener('click', eventFn);
 
     // component will unmount
     return () => {
-      document.querySelector("h1")?.removeEventListener("click", eventFn);
+      document.querySelector('h1')?.removeEventListener('click', eventFn);
     };
   }, []);
 
   // com dependencia
   // se a dependencia muda, a funcao é chamada
   useEffect(() => {
-    console.log("increase counter: ", counter1);
+    console.log('increase counter: ', counter1);
   }, [counter1]);
 
   return (

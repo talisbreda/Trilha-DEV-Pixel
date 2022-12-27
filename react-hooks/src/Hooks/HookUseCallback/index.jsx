@@ -1,7 +1,7 @@
 // import { Component } from "react";
-import P from "prop-types";
-import React, { useCallback, useMemo, useState } from "react";
-import "./App.css";
+import P from 'prop-types';
+import React, { useCallback, useMemo, useState } from 'react';
+import './App.css';
 
 const Button = ({ incrementCounter }) => {
   return <button onClick={() => incrementCounter(10)}>+</button>;

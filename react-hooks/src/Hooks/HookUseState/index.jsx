@@ -1,12 +1,12 @@
 // import { Component } from "react";
-import { useState } from "react";
-import "./App.css";
-import logo from "./logo.svg";
+import { useState } from 'react';
+import './App.css';
+import logo from './logo.svg';
 
 function App() {
   const [reverse, setReverse] = useState(false);
   const [counter, setCounter] = useState(0);
-  const reverseClass = reverse ? "reverse" : "";
+  const reverseClass = reverse ? 'reverse' : '';
 
   const handleClick = () => {
     setReverse((reverse) => !reverse);

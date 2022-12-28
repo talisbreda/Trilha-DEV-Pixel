@@ -1,11 +1,8 @@
 import './App.css';
+import { Home } from './CustomHooks/useMediaQuery';
 
 function App() {
-  return (
-    <div>
-      <h1>aaaaaaaa</h1>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;

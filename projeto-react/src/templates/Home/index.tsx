@@ -1,9 +1,12 @@
 import React from 'react';
+import * as Styled from './styles';
 
 function App() {
   return (
     <div>
-      <h1>aaaaaaaaaaa</h1>
+      <Styled.Wrapper>
+        <h1>aaaaaaaaaaa</h1>
+      </Styled.Wrapper>
     </div>
   );
 }

@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <Styled.Wrapper>
-        <Heading>aaaaaaaaaaa</Heading>
+        <Heading light={false}>aaaaaaaaaaa</Heading>
       </Styled.Wrapper>
     </div>
   );

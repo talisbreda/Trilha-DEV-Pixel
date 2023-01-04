@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextComponent /> should render children text 1`] = `
+<div>
+  <div
+    class="sc-bcXHqe jYqDaA"
+  >
+    Children
+  </div>
+</div>
+`;

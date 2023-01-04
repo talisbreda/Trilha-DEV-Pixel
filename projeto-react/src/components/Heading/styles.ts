@@ -1,14 +1,6 @@
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 import { Theme } from '../../styles/theme';
 
-interface Props {
-  theme: Theme;
-  darkColor: boolean;
-  as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-  size: 'huge' | 'large' | 'medium' | 'small';
-  upperCase: boolean;
-}
-
 type sizes = {
   small: (theme: Theme) => FlattenSimpleInterpolation;
   medium: (theme: Theme) => FlattenSimpleInterpolation;
@@ -41,6 +33,14 @@ const titleSize: sizes = {
 const titleCase = (upperCase: boolean) => css`
   text-transform: ${upperCase ? 'uppercase' : 'none'};
 `;
+
+interface Props {
+  theme: Theme;
+  darkColor: boolean;
+  as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  size: 'huge' | 'large' | 'medium' | 'small';
+  upperCase: boolean;
+}
 
 export const Title = styled.h1<Props>`
   ${({ theme, darkColor, size, upperCase }) => {

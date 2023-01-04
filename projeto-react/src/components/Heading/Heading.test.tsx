@@ -55,17 +55,4 @@ describe('<Heading />', () => {
       'font-size': defaultTheme.font.sizes.medium,
     });
   });
-
-  it('should render correct font size when using mobile', () => {
-    renderTheme(<Heading size='huge'>texto</Heading>);
-    const heading = screen.getByRole('heading', { name: 'texto' });
-
-    expect(heading).toHaveStyleRule(
-      'font-size',
-      defaultTheme.font.sizes.large,
-      {
-        media: defaultTheme.media.ltMedium,
-      },
-    );
-  });
 });

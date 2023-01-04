@@ -1,18 +1,21 @@
 import { Heading } from '.';
 
+interface Args {
+  children: React.ReactNode | string;
+  upperCase: boolean;
+  size: 'huge' | 'large' | 'medium' | 'small';
+}
+
+const args: Args = {
+  children: 'aaaa',
+  upperCase: false,
+  size: 'medium',
+};
+
 const heading = {
   title: 'Heading',
   component: Heading,
-  args: {
-    children: 'aaaa',
-    upperCase: false,
-    size: 'medium',
-  },
-  argTypes: {
-    children: 'string',
-    upperCase: 'boolean',
-    size: 'string',
-  },
+  args,
   parameters: {
     backgrounds: {
       default: 'dark',
@@ -22,13 +25,15 @@ const heading = {
 
 export default heading;
 
-export const Light = (args: object) => {
+export const Light = (argss: Args) => {
+  const { children, ...props } = argss;
   // eslint-disable-next-line react/jsx-props-no-spreading
-  return <Heading {...args} />;
+  return <Heading {...props}>{children}</Heading>;
 };
-export const Dark = (args: object) => {
+export const Dark = (argss: Args) => {
+  const { children, ...props } = argss;
   // eslint-disable-next-line react/jsx-props-no-spreading
-  return <Heading {...args} />;
+  return <Heading {...props}>{children}</Heading>;
 };
 
 Light.args = {

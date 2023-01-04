@@ -7,7 +7,7 @@ export interface Link {
   newTab: boolean;
 }
 
-export const NavLinks = ({ links = [] }: { links: Array<Link> }) => {
+export const NavLinks = ({ links = [] }: { links?: Array<Link> }) => {
   return (
     <Styled.Container>
       {links.map((link) => {
@@ -16,4 +16,8 @@ export const NavLinks = ({ links = [] }: { links: Array<Link> }) => {
       })}
     </Styled.Container>
   );
+};
+
+NavLinks.defaultProps = {
+  links: [],
 };

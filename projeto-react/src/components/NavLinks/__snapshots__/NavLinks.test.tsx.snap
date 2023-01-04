@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavLinks /> should not match snapshot 1`] = `
+Array [
+  <a
+    class="sc-bcXHqe dfnVxD"
+    href="#target1"
+    target="_self"
+  >
+    Link 1
+  </a>,
+  <a
+    class="sc-bcXHqe dfnVxD"
+    href="#target2"
+    target="_blank"
+  >
+    Link 2
+  </a>,
+  <a
+    class="sc-bcXHqe dfnVxD"
+    href="#target3"
+    target="_blank"
+  >
+    Link 3
+  </a>,
+  <a
+    class="sc-bcXHqe dfnVxD"
+    href="#target4"
+    target="_blank"
+  >
+    Link 4
+  </a>,
+  <a
+    class="sc-bcXHqe dfnVxD"
+    href="#target5"
+    target="_self"
+  >
+    Link 5
+  </a>,
+  <a
+    class="sc-bcXHqe dfnVxD"
+    href="#target6"
+    target="_self"
+  >
+    Link 6
+  </a>,
+  <a
+    class="sc-bcXHqe dfnVxD"
+    href="#target7"
+    target="_self"
+  >
+    Link 7
+  </a>,
+  <a
+    class="sc-bcXHqe dfnVxD"
+    href="#target8"
+    target="_self"
+  >
+    Link 8
+  </a>,
+  <a
+    class="sc-bcXHqe dfnVxD"
+    href="#target9"
+    target="_self"
+  >
+    Link 9
+  </a>,
+  <a
+    class="sc-bcXHqe dfnVxD"
+    href="#target0"
+    target="_self"
+  >
+    Link 0
+  </a>,
+  <a
+    class="sc-bcXHqe dfnVxD"
+    href="#target11"
+    target="_self"
+  >
+    Link 1
+  </a>,
+  <a
+    class="sc-bcXHqe dfnVxD"
+    href="#target12"
+    target="_self"
+  >
+    Link 2
+  </a>,
+  <a
+    class="sc-bcXHqe dfnVxD"
+    href="#target3"
+    target="_self"
+  >
+    Link 3
+  </a>,
+]
+`;

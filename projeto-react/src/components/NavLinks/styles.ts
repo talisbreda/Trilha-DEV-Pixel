@@ -5,7 +5,7 @@ interface Props {
   theme: Theme;
 }
 
-export const Container = styled.div<Props>`
+export const Container = styled.nav<Props>`
   ${({ theme }) => css`
     background: #fff;
     display: flex;

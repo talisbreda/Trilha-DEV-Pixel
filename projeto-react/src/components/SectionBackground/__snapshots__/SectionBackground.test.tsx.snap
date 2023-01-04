@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SectionBackground /> should render with dark background 1`] = `
+<div>
+  <div
+    class="sc-gswNZR iCCzcB"
+  >
+    <div
+      class="sc-bcXHqe ilsefL"
+    >
+      <h1>
+        Children
+      </h1>
+    </div>
+  </div>
+</div>
+`;

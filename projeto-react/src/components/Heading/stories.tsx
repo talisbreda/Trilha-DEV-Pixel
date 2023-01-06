@@ -2,14 +2,10 @@ import { Heading } from '.';
 
 interface Args {
   children: React.ReactNode | string;
-  upperCase: boolean;
-  size: 'huge' | 'large' | 'medium' | 'small';
 }
 
 const args: Args = {
   children: 'aaaa',
-  upperCase: false,
-  size: 'medium',
 };
 
 const heading = {

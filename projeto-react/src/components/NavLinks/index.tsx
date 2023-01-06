@@ -1,4 +1,5 @@
 import { MenuLink } from '../MenuLink';
+import mock from './mock';
 import * as Styled from './styles';
 
 export interface Link {
@@ -9,7 +10,7 @@ export interface Link {
 
 export const NavLinks = ({ links = [] }: { links?: Array<Link> }) => {
   return (
-    <Styled.Container>
+    <Styled.Container aria-label='Main menu'>
       {links.map((link) => {
         /* eslint-disable-next-line react/jsx-props-no-spreading */
         return <MenuLink key={link.link} {...link} />;
@@ -19,5 +20,5 @@ export const NavLinks = ({ links = [] }: { links?: Array<Link> }) => {
 };
 
 NavLinks.defaultProps = {
-  links: [],
+  links: mock,
 };

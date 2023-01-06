@@ -7,7 +7,7 @@ interface Props {
 }
 
 export const Container = styled.a<Props>`
-  ${({ theme }) => css`
+  ${() => css`
     display: flex;
     align-items: center;
     text-decoration: none;

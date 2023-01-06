@@ -7,7 +7,6 @@ interface Props {
 
 export const Container = styled.nav<Props>`
   ${({ theme }) => css`
-    background: #fff;
     display: flex;
     flex-flow: row wrap;
 

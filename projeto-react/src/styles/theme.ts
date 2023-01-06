@@ -1,8 +1,9 @@
-export interface Theme {
+export type Theme = {
   colors: {
     primaryColor: string;
     secondaryColor: string;
     white: string;
+    mediumGray: string;
   };
   font: {
     family: {
@@ -27,13 +28,14 @@ export interface Theme {
   media: {
     ltMedium: string;
   };
-}
+};
 
 export const defaultTheme: Theme = {
   colors: {
     primaryColor: '#0a1128',
     secondaryColor: '#dc143c',
     white: '#fff',
+    mediumGray: '#ddd',
   },
   font: {
     family: {

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { defaultTheme } from './theme';
+import { Theme } from './theme';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -14,12 +14,23 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-size: 1.6rem;
-    font-family: ${({ theme }: { theme: typeof defaultTheme }) =>
-      theme.font.family.default};
+    font-family: ${({ theme }: { theme: Theme }) => theme.font.family.default};
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: ${({ theme }: { theme: typeof defaultTheme }) =>
-      theme.font.family.secondary};
+    font-family: ${({ theme }) => theme.font.family.secondary};
+  }
+
+  p {
+    margin: ${({ theme }) => theme.spacings.medium};
+  }
+
+  ul, ol {
+    margin: ${({ theme }) => theme.spacings.medium};
+    padding: ${({ theme }) => theme.spacings.medium};
+  }
+
+  a {
+    color: ${({ theme }) => theme.colors.secondaryColor};
   }
 `;

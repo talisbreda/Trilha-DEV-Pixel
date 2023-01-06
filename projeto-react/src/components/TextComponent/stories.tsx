@@ -1,7 +1,7 @@
 import { TextComponent } from '.';
 
 interface Args {
-  children: React.ReactNode | string;
+  children: string;
 }
 
 const args: Args = {

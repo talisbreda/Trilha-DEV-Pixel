@@ -16,6 +16,7 @@ export type Theme = {
       medium: string;
       large: string;
       huge: string;
+      xhuge: string;
     };
   };
   spacings: {
@@ -24,6 +25,7 @@ export type Theme = {
     medium: string;
     large: string;
     huge: string;
+    xhuge: string;
   };
   media: {
     ltMedium: string;
@@ -39,8 +41,8 @@ export const defaultTheme: Theme = {
   },
   font: {
     family: {
-      default: "'Montserrat', sans-serif;",
-      secondary: "'Open Sans', sans-serif;",
+      default: "'Open Sans', sans-serif;",
+      secondary: "'Montserrat', sans-serif;",
     },
     sizes: {
       tiny: '1.6rem',
@@ -48,6 +50,7 @@ export const defaultTheme: Theme = {
       medium: '3.2rem',
       large: '4.0rem',
       huge: '4.8rem',
+      xhuge: '6.4rem',
     },
   },
   spacings: {
@@ -56,6 +59,7 @@ export const defaultTheme: Theme = {
     medium: '3.2rem',
     large: '4.0rem',
     huge: '4.8rem',
+    xhuge: '6.4rem',
   },
   media: {
     ltMedium: '(max-width: 768px)',

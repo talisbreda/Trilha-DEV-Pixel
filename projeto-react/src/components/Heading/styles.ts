@@ -25,7 +25,7 @@ const titleSize: sizes = {
     font-size: ${theme.font.sizes.large};
   `,
   huge: (theme) => css`
-    font-size: ${theme.font.sizes.huge};
+    font-size: ${theme.font.sizes.xhuge};
     ${mediaFont(theme)};
   `,
 };
@@ -45,9 +45,9 @@ interface Props {
 export const Title = styled.h1<Props>`
   ${({ theme, darkColor, size, upperCase }) => {
     return css`
-        color: ${darkColor ? theme.colors.primaryColor : theme.colors.white};
-        ${titleSize[size](theme)};
-        ${titleCase(upperCase)};
+      color: ${darkColor ? theme.colors.primaryColor : theme.colors.white};
+      ${titleSize[size](theme)};
+      ${titleCase(upperCase)};
     `;
   }}
 `;
